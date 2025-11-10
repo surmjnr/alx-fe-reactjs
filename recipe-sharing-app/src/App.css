@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.app {
+  width: 100%;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +43,82 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Recipe List Styles */
+.recipe-list {
+  margin-top: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recipe-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(26, 26, 26, 0.5);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.recipe-card:hover {
+  border-color: #646cff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.2);
+}
+
+.recipe-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #646cff;
+}
+
+.recipe-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.results-count {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: rgba(100, 108, 255, 0.1);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.no-results {
+  padding: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.no-results p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .recipe-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(100, 108, 255, 0.3);
+  }
+
+  .recipe-card:hover {
+    border-color: #646cff;
+    box-shadow: 0 4px 12px rgba(100, 108, 255, 0.15);
+  }
+
+  .recipe-card p {
+    color: rgba(33, 53, 71, 0.7);
+  }
+
+  .results-count {
+    background-color: rgba(100, 108, 255, 0.1);
+    color: #213547;
+  }
+
+  .no-results {
+    color: rgba(33, 53, 71, 0.6);
+  }
 }
