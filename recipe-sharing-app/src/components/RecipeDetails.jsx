@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useRecipeStore } from './recipeStore';
 import EditRecipeForm from './EditRecipeForm';
 import DeleteRecipeButton from './DeleteRecipeButton';
+import FavoriteButton from './FavoriteButton';
 
 const RecipeDetails = () => {
   const { recipeId } = useParams();
@@ -22,7 +23,10 @@ const RecipeDetails = () => {
   return (
     <div>
       <button onClick={() => navigate('/')}>Back to Home</button>
-      <h1>{recipe.title}</h1>
+      <div className="recipe-details-header">
+        <h1>{recipe.title}</h1>
+        <FavoriteButton recipeId={recipe.id} />
+      </div>
       <p>{recipe.description}</p>
       <EditRecipeForm recipe={recipe} />
       <DeleteRecipeButton recipeId={recipe.id} />

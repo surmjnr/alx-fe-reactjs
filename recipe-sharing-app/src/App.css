@@ -98,6 +98,105 @@
   font-size: 1.1rem;
 }
 
+/* Recipe Card Header */
+.recipe-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-card-header h3 {
+  flex: 1;
+  margin: 0;
+}
+
+/* Favorite Button */
+.favorite-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.25s;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.favorite-button:hover {
+  border-color: #646cff;
+  background-color: rgba(100, 108, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.favorite-button.favorited {
+  border-color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.favorite-button.favorited:hover {
+  border-color: #ff5252;
+  background-color: rgba(255, 107, 107, 0.2);
+}
+
+.favorite-button span {
+  font-size: 0.85rem;
+}
+
+/* Favorites List */
+.favorites-list {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.favorites-list h2 {
+  color: #646cff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Recommendations List */
+.recommendations-list {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.recommendations-list h2 {
+  color: #646cff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Recipe List Container */
+.recipe-list-container {
+  margin-top: 3rem;
+}
+
+.recipe-list-container h2 {
+  color: #646cff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Recipe Details Header */
+.recipe-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.recipe-details-header h1 {
+  flex: 1;
+  margin: 0;
+}
+
 @media (prefers-color-scheme: light) {
   .recipe-card {
     background-color: rgba(255, 255, 255, 0.8);
@@ -120,5 +219,20 @@
 
   .no-results {
     color: rgba(33, 53, 71, 0.6);
+  }
+
+  .favorite-button {
+    color: #213547;
+    border-color: rgba(100, 108, 255, 0.3);
+  }
+
+  .favorite-button:hover {
+    background-color: rgba(100, 108, 255, 0.1);
+  }
+
+  .favorites-list h2,
+  .recommendations-list h2,
+  .recipe-list-container h2 {
+    color: #646cff;
   }
 }
